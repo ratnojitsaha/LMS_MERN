@@ -1,7 +1,7 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 import { userLoggedIn, userLoggedOut } from "../authSlice";
 
-const USER_API = "https://lms-mern-b3uf.onrender.com"
+const USER_API = "https://lms-mern-b3uf.onrender.com";
 
 export const authApi = createApi({
     reducerPath:"authApi",
