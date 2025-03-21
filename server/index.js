@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin:"https://lms-mern-frontend-oolh.onrender.com",
+    origin:"https://lms-mern-frontendd-oolh.onrender.com",
     credentials:true
 }));
  
