@@ -1,5 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from "'components/ui/avatar'";
-import { Button } from "'components/ui/button'";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -8,16 +8,16 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "'components/ui/dialog'";
-import { Input } from "'components/ui/input'";
-import { Label } from "'components/ui/label'";
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Loader2 } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import Course from "./Course";
 import {
   useLoadUserQuery,
   useUpdateUserMutation,
-} from "'features/api/authApi'";
+} from "@/features/api/authApi";
 import { toast } from "sonner";
 
 const Profile = () => {
@@ -68,9 +68,8 @@ const Profile = () => {
 
   const user = data && data.user;
 
-  if (!user) {
-    return <h1 className="text-red-500">User data not found.</h1>;
-  }
+  console.log(user);
+  
 
   return (
     <div className="max-w-4xl mx-auto px-4 my-10">
