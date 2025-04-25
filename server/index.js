@@ -21,11 +21,13 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(cors({
-    origin:"https://lms-mern-frontend-oolh.onrender.com",
-    credentials:true
-}));
- 
+// app.use(cors({
+//     //origin:"https://lms-mern-frontend-oolh.onrender.com",
+//     credentials:true
+// }));
+
+app.use(cors());
+
 // apis
 app.use("/api/v1/media", mediaRoute);
 app.use("/api/v1/user", userRoute);
