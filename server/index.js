@@ -8,7 +8,7 @@ import courseRoute from "./routes/course.route.js";
 import mediaRoute from "./routes/media.route.js";
 import purchaseRoute from "./routes/purchaseCourse.route.js";
 import courseProgressRoute from "./routes/courseProgress.route.js";
-const serverless = require('serverless-http');
+import serverless from "serverless-http";
 
 dotenv.config({});
 
@@ -28,21 +28,21 @@ app.use(cookieParser());
 //     origin:"http://localhost:5173",
 //     credentials:true
 // }));
-app.use(cors({
-     origin: FRONT_URL,
-    // origin : "*",
-    credentials:true
-}));
+// app.use(cors({
+//      origin: FRONT_URL,
+//     // origin : "*",
+//     credentials:true
+// }));
 
 
-// const corsOptions = {
-//     origin: 'https://lms-mern-k94l.vercel.app',
-//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//     allowedHeaders: ['Content-Type', 'Authorization'],
-//     credentials : true
-//   };
+const corsOptions = {
+    origin: 'https://lms-mern-k94l.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials : true
+  };
   
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
  
 // apis
 app.use("/api/v1/media", mediaRoute);
