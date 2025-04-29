@@ -8,7 +8,6 @@ import courseRoute from "./routes/course.route.js";
 import mediaRoute from "./routes/media.route.js";
 import purchaseRoute from "./routes/purchaseCourse.route.js";
 import courseProgressRoute from "./routes/courseProgress.route.js";
-import serverless from "serverless-http";
 
 dotenv.config({});
 
@@ -52,9 +51,8 @@ app.use("/api/v1/purchase", purchaseRoute);
 app.use("/api/v1/progress", courseProgressRoute);
  
  
-// app.listen(PORT, () => {
-//     console.log(`Server listen at port ${PORT}`);
-// })
-export const handler = serverless(app);
+app.listen(PORT, () => {
+    console.log(`Server listen at port ${PORT}`);
+})
 
 
