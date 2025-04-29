@@ -17,7 +17,7 @@ const app = express();
 
 const PORT = process.env.PORT || 8080;
 
-const FRONT_URL = process.env.FRONTEND_URL || "http://localhost:5173"
+const FRONT_URL = process.env.FRONTEND_URL || "http://localhost:5173";
 
 // default middleware
 app.use(express.json());
@@ -28,7 +28,7 @@ app.use(cookieParser());
 //     credentials:true
 // }));
 app.use(cors({
-     origin:FRONT_URL,
+     origin: FRONT_URL,
     // origin : "*",
     credentials:true
 }));
