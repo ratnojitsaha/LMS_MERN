@@ -28,8 +28,8 @@ app.use(cookieParser());
 //     credentials:true
 // }));
 app.use(cors({
-    // origin:FRONT_URL,
-    origin : "*",
+     origin:FRONT_URL,
+    // origin : "*",
     credentials:true
 }));
  
